@@ -1,0 +1,104 @@
+@media (max-width: 768px) {
+  .desktop-divider {
+    display: none !important;
+  }
+  .adviceCont {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}
+@media (min-width: 769px) {
+  .mobile-divider {
+    display: none !important;
+  }
+  .adviceCont {
+    width: 50vw;
+  }
+}
+@media (min-width: 1440px) {
+  .adviceCont {
+    width: 40vw !important;
+  }
+}
+
+:root {
+  /* primary colors */
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Grean: hsl(150, 100%, 66%);
+  --Neon-Grean-hover: hsl(150, 100%, 72%);
+  /* Neutral colors */
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: var(--Light-Cyan);
+  background-color: var(--Dark-Blue);
+}
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+/* font-size of qoute 28px */
+
+.adviceCont {
+  background-color: var(--Dark-Grayish-Blue);
+  padding: 30px 60px;
+  margin: 50vh auto 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 70px 0 var(--Dark-Blue), 0px 0px 66px 0 var(--Dark-Blue),
+    0px 0px 7px 0 #ffffff3f;
+  position: relative;
+}
+.adviceCont h2 {
+  color: var(--Neon-Grean);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 600;
+  margin: 25px auto 0;
+}
+.adviceCont blockquote {
+  font-size: 28px;
+  text-align: center;
+  margin: 25px auto 40px;
+}
+.adviceCont .desktop-divider {
+  display: block;
+  margin: 0 0 30px;
+  width: 100%;
+}
+.adviceCont .mobile-divider {
+  display: block;
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+.adviceCont .dice-cont {
+  width: 60px;
+  height: 60px;
+  background-color: var(--Neon-Grean);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.adviceCont .dice-cont:hover {
+  box-shadow: 0 0 34px 0 var(--Neon-Grean);
+}
