@@ -102,3 +102,10 @@ img {
 .adviceCont .dice-cont:hover {
   box-shadow: 0 0 34px 0 var(--Neon-Grean);
 }
+
+.attribution {
+  font-size: 20px;
+}
+.attribution a {
+  color: rgb(19, 139, 194);
+}
