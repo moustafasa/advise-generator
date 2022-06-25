@@ -40,14 +40,15 @@
 //   });
 
 // connect to api by async and fetch
+// get advice q and id span
+let advQ = document.querySelector(".adviceCont blockquote q");
+let advSpanId = document.querySelector(".adviceCont h2 span");
 async function getData(api) {
   let myprom = await fetch(api);
   let apiData = await myprom.json();
   let advice = apiData["slip"]["advice"];
   let id = apiData["slip"]["id"];
-  // get advice q and id span
-  let advQ = document.querySelector(".adviceCont blockquote q");
-  let advSpanId = document.querySelector(".adviceCont h2 span");
+  // submit data to dom
   advQ.innerHTML = advice;
   advSpanId.innerHTML = id;
 }
@@ -59,10 +60,12 @@ async function getData(api) {
 // }, 2000);
 
 let dice = document.querySelector(".adviceCont .dice-cont");
+
 dice.addEventListener("click", () => {
   dice.style.backgroundColor = "red";
   setTimeout(() => {
     getData("https://api.adviceslip.com/advice");
+    advQ.classList.remove("first");
     setTimeout(() => {
       dice.style.backgroundColor = "var(--Neon-Grean)";
     }, 500);

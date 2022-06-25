@@ -73,6 +73,9 @@ img {
   text-align: center;
   margin: 25px auto 40px;
 }
+.adviceCont blockquote .first {
+  color: red;
+}
 .adviceCont .desktop-divider {
   display: block;
   margin: 0 0 30px;
