@@ -51,6 +51,7 @@ async function getData(api) {
   // submit data to dom
   advQ.innerHTML = advice;
   advSpanId.innerHTML = id;
+  advQ.classList.remove("first");
 }
 
 // get advice every 2 second
@@ -65,7 +66,6 @@ dice.addEventListener("click", () => {
   dice.style.backgroundColor = "red";
   setTimeout(() => {
     getData("https://api.adviceslip.com/advice");
-    advQ.classList.remove("first");
     setTimeout(() => {
       dice.style.backgroundColor = "var(--Neon-Grean)";
     }, 500);
