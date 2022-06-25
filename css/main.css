@@ -74,7 +74,7 @@ img {
   margin: 25px auto 40px;
 }
 .adviceCont blockquote .first {
-  color: red;
+  color: rgb(19, 139, 194);
 }
 .adviceCont .desktop-divider {
   display: block;
